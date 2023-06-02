@@ -13,7 +13,7 @@
   }
 }
 
-.main {
+.infoPage {
   margin-top: 5rem;
   display: flex;
   flex-direction: column;
@@ -60,10 +60,26 @@
         font-weight: 700;
         font-size: 3.4rem;
         height: 150%;
+        margin-bottom: 5rem;
       }
 
       .text {
-        margin-top: 5rem;
+        h2,
+        p {
+          font-size: 1.8rem;
+          font-weight: 700;
+          margin-top: 2rem;
+        }
+
+        p {
+          font-weight: 100;
+        }
+      }
+
+      .checkText {
+        display: flex;
+        flex-direction: column;
+        margin-left: 2rem;
 
         h2,
         p {
@@ -74,6 +90,10 @@
 
         p {
           font-weight: 100;
+        }
+
+        .check {
+          margin-right: 1rem;
         }
       }
     }
