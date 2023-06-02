@@ -2,7 +2,7 @@ import "../styles/globals.scss";
 
 import { Inter } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"], weight: "400" });
+const inter = Inter({ subsets: ["latin"], weight: ["400", "700"] });
 
 function MyApp({ Component, pageProps }) {
   return (

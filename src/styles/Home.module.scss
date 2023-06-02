@@ -1,1 +1,76 @@
+.principalImageContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
 
+  .principalImage {
+    background-image: url("/images/imagemPrincipal.png");
+    height: 39rem;
+    width: 116rem;
+    border-radius: 0.5rem;
+  }
+}
+
+.main {
+  margin-top: 5rem;
+
+  .tagContainer {
+    ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      flex-wrap: wrap;
+      gap: 2.1rem;
+
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.4rem;
+        font-weight: 700;
+        background-color: var(--background-button);
+        color: var(--white-textColor);
+        border-radius: 0.5rem;
+        text-decoration: none;
+        width: 10rem;
+        height: 3.2rem;
+
+        &:hover {
+          filter: opacity(0.9);
+          transition: all 0.3s ease-in-out;
+        }
+      }
+    }
+  }
+
+  .section {
+    margin: 0 auto;
+    max-width: 94.5rem;
+    height: 8.7rem;
+
+    .sectionContainer {
+      margin-top: 5rem;
+
+      h1 {
+        font-weight: 700;
+        font-size: 3.4rem;
+        height: 150%;
+      }
+
+      .text {
+        margin-top: 5rem;
+
+        h2,
+        p {
+          font-size: 1.8rem;
+          font-weight: 700;
+          margin-top: 2rem;
+        }
+
+        p {
+          font-weight: 100;
+        }
+      }
+    }
+  }
+}
