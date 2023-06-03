@@ -5,6 +5,10 @@ import Link from "next/link";
 import globalIcone from "../../public/images/ícone.png";
 import Image from "next/image";
 import check from "../../public/images/check.png";
+import cardOne from "../../public/images/card1.png";
+import cardTwo from "../../public/images/card2.png";
+import cardThree from "../../public/images/card3.png";
+import arrow from "../../public/images/arrow.png";
 
 export default function Home() {
   return (
@@ -105,27 +109,29 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <article className={styles.shutterstock}>
-          <div className={styles.shutterstockContainer}>
-            <Image
-              src={globalIcone}
-              width={39}
-              height={39}
-              alt="Global Image"
-              className={styles.globalIcone}
-            />
-            <div className={styles.imageText}>
-              <h2>Lorem ipsum dolor amet consectetur</h2>
-              <p>adipiscing elit vitae mattis</p>
-              <ul>
-                <Link href="#">
-                  <li>Lorem ipsum</li>
-                </Link>
-              </ul>
+        <section className={styles.shutterstockContainer}>
+          <div className={styles.shutterstock}>
+            <div className={styles.shutterstockContent}>
+              <Image
+                src={globalIcone}
+                width={39}
+                height={39}
+                alt="Global Image"
+                className={styles.globalIcone}
+              />
+              <div className={styles.imageText}>
+                <h2>Lorem ipsum dolor amet consectetur</h2>
+                <p>adipiscing elit vitae mattis</p>
+                <ul>
+                  <Link href="#">
+                    <li>Lorem ipsum</li>
+                  </Link>
+                </ul>
+              </div>
             </div>
+            <div className={styles.shutterstockImage} />
           </div>
-          <div className={styles.shutterstockImage} />
-        </article>
+        </section>
         <section className={styles.section}>
           <div className={styles.sectionContainer}>
             <div className={styles.text}>
@@ -198,6 +204,122 @@ export default function Home() {
                 libero placerat sem rutrum posuere. Donec consectetur congue
                 elit in dapibus.
               </p>
+            </div>
+          </div>
+        </section>
+        <section className={styles.sectionCards}>
+          <h2>Você pode se interessar também</h2>
+          <div className={styles.cardsContainer}>
+            <div className={styles.cardsContent}>
+              <div className={styles.card}>
+                <div>
+                  <Image
+                    src={cardOne}
+                    width={326}
+                    height={170}
+                    alt="Card Image"
+                    className={styles.cardImage}
+                  />
+                </div>
+
+                <div className={styles.cardText}>
+                  <h3>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                  </h3>
+                  <p>
+                    Curabitur eros diam, aliquam eget cursus et, dapibus a
+                    neque. Quisque venenatis, enim eget imperdiet eleifend, erat
+                    sapien tempus nibh.
+                  </p>
+                </div>
+
+                <div className={styles.cardLinkContainer}>
+                  <Link href="#" className={styles.cardLink}>
+                    <p>Leia mais</p>
+                    <Image
+                      src={arrow}
+                      width={12}
+                      height={9}
+                      alt="Global Image"
+                      className={styles.arrow}
+                    />
+                  </Link>
+                </div>
+              </div>
+            </div>
+            <div className={styles.cardsContent}>
+              <div className={styles.card}>
+                <div>
+                  <Image
+                    src={cardTwo}
+                    width={326}
+                    height={170}
+                    alt="Card Image"
+                    className={styles.cardImage}
+                  />
+                </div>
+
+                <div className={styles.cardText}>
+                  <h3>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                  </h3>
+                  <p>
+                    Curabitur eros diam, aliquam eget cursus et, dapibus a
+                    neque. Quisque venenatis, enim eget imperdiet eleifend, erat
+                    sapien tempus nibh.
+                  </p>
+                </div>
+
+                <div className={styles.cardLinkContainer}>
+                  <Link href="#" className={styles.cardLink}>
+                    <p>Leia mais</p>
+                    <Image
+                      src={arrow}
+                      width={12}
+                      height={9}
+                      alt="Global Image"
+                      className={styles.arrow}
+                    />
+                  </Link>
+                </div>
+              </div>
+            </div>
+            <div className={styles.cardsContent}>
+              <div className={styles.card}>
+                <div>
+                  <Image
+                    src={cardThree}
+                    width={326}
+                    height={170}
+                    alt="Card Image"
+                    className={styles.cardImage}
+                  />
+                </div>
+
+                <div className={styles.cardText}>
+                  <h3>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                  </h3>
+                  <p>
+                    Curabitur eros diam, aliquam eget cursus et, dapibus a
+                    neque. Quisque venenatis, enim eget imperdiet eleifend, erat
+                    sapien tempus nibh.
+                  </p>
+                </div>
+
+                <div className={styles.cardLinkContainer}>
+                  <Link href="#" className={styles.cardLink}>
+                    <p>Leia mais</p>
+                    <Image
+                      src={arrow}
+                      width={12}
+                      height={9}
+                      alt="Global Image"
+                      className={styles.arrow}
+                    />
+                  </Link>
+                </div>
+              </div>
             </div>
           </div>
         </section>
