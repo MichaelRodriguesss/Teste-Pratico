@@ -213,9 +213,9 @@
     padding-bottom: 5rem;
     gap: 2rem;
 
-    h2 {
+    .knowMore {
       text-align: center;
-      margin: 5rem 0 2rem 0;
+      margin: 2rem 0 2rem 0;
     }
 
     @media (max-width: 768px) {
@@ -243,6 +243,32 @@
 
           .cardImage {
             border-radius: 0.5rem;
+            display: block;
+          }
+
+          .cardOrangeLink {
+            text-decoration: none;
+            color: var(--white-textColor);
+
+            p {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              position: relative;
+              left: 22rem;
+              top: 4rem;
+              border-radius: 0.5rem;
+              font-size: 1.4rem;
+              font-weight: 700;
+              background-color: var(--background-button);
+              width: 10rem;
+              height: 3.2rem;
+
+              &:hover {
+                filter: opacity(0.9);
+                transition: all 0.3s ease-in-out;
+              }
+            }
           }
 
           .cardText {
@@ -252,8 +278,7 @@
             h3,
             p {
               font-weight: 700;
-              font-size: 1.8rem;
-              line-height: 150%;
+              font-size: 1.6rem;
             }
 
             p {

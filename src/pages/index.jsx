@@ -8,9 +8,30 @@ import check from "../../public/images/check.png";
 import cardOne from "../../public/images/card1.png";
 import cardTwo from "../../public/images/card2.png";
 import cardThree from "../../public/images/card3.png";
-import arrow from "../../public/images/arrow.png";
+import { useState, useEffect } from "react";
+import { Api } from "../providers/Api/api";
+
+import Card from "../components/Card/Card";
 
 export default function Home() {
+  const [info, setInfo] = useState([]);
+
+  useEffect(() => {
+    const fetchUser = async () => {
+      try {
+        const response = await Api.get(
+          `https://jsonplaceholder.typicode.com/posts`
+        );
+        console.log(response);
+        return setInfo(response.data);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+
+    fetchUser();
+  }, []);
+
   return (
     <div className={styles.container}>
       <Head>
@@ -43,20 +64,8 @@ export default function Home() {
             </h1>
 
             <div className={styles.text}>
-              <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
-              <p>
-                Nunc rhoncus aliquam arcu. Mauris molestie vestibulum massa,
-                congue ultrices sem imperdiet dignissim. Etiam tristique arcu
-                magna. Fusce euismod mattis diam, at ultrices ex varius vitae.
-                Ut maximus libero nec tincidunt pulvinar. Etiam a auctor dui.
-                Sed vehicula eros eu elit elementum ultricies. In egestas lacus
-                dolor, in faucibus arcu scelerisque quis. Aliquam urna dolor,
-                eleifend at dapibus ac, dapibus at odio. Ut condimentum
-                pellentesque lacinia. Mauris tincidunt, mi id venenatis
-                porttitor, nibh ipsum laoreet neque, sit amet viverra mauris leo
-                vel dui. Maecenas ac lectus tincidunt, consequat quam nec,
-                mollis massa.
-              </p>
+              <h2>{info.length != 0 && info[0].title}</h2>
+              <p>{info.length != 0 && info[0].body}</p>
             </div>
 
             <div className={styles.text}>
@@ -78,9 +87,7 @@ export default function Home() {
             </div>
 
             <div className={styles.text}>
-              <h2>
-                Fusce ut nibh ornare, ullamcorper velit vitae, dignissim tellus.
-              </h2>
+              <h2></h2>
               <p>
                 Nullam mattis auctor leo, sit amet aliquet odio pellentesque ut.
                 Mauris molestie turpis eget egestas venenatis. Duis nec elit
@@ -208,119 +215,23 @@ export default function Home() {
           </div>
         </section>
         <section className={styles.sectionCards}>
-          <h2>Você pode se interessar também</h2>
+          <h2 className={styles.knowMore}>Você pode se interessar também</h2>
           <div className={styles.cardsContainer}>
-            <div className={styles.cardsContent}>
-              <div className={styles.card}>
-                <div>
-                  <Image
-                    src={cardOne}
-                    width={326}
-                    height={170}
-                    alt="Card Image"
-                    className={styles.cardImage}
-                  />
-                </div>
-
-                <div className={styles.cardText}>
-                  <h3>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit
-                  </h3>
-                  <p>
-                    Curabitur eros diam, aliquam eget cursus et, dapibus a
-                    neque. Quisque venenatis, enim eget imperdiet eleifend, erat
-                    sapien tempus nibh.
-                  </p>
-                </div>
-
-                <div className={styles.cardLinkContainer}>
-                  <Link href="#" className={styles.cardLink}>
-                    <p>Leia mais</p>
-                    <Image
-                      src={arrow}
-                      width={12}
-                      height={9}
-                      alt="Global Image"
-                      className={styles.arrow}
-                    />
-                  </Link>
-                </div>
-              </div>
-            </div>
-            <div className={styles.cardsContent}>
-              <div className={styles.card}>
-                <div>
-                  <Image
-                    src={cardTwo}
-                    width={326}
-                    height={170}
-                    alt="Card Image"
-                    className={styles.cardImage}
-                  />
-                </div>
-
-                <div className={styles.cardText}>
-                  <h3>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit
-                  </h3>
-                  <p>
-                    Curabitur eros diam, aliquam eget cursus et, dapibus a
-                    neque. Quisque venenatis, enim eget imperdiet eleifend, erat
-                    sapien tempus nibh.
-                  </p>
-                </div>
-
-                <div className={styles.cardLinkContainer}>
-                  <Link href="#" className={styles.cardLink}>
-                    <p>Leia mais</p>
-                    <Image
-                      src={arrow}
-                      width={12}
-                      height={9}
-                      alt="Global Image"
-                      className={styles.arrow}
-                    />
-                  </Link>
-                </div>
-              </div>
-            </div>
-            <div className={styles.cardsContent}>
-              <div className={styles.card}>
-                <div>
-                  <Image
-                    src={cardThree}
-                    width={326}
-                    height={170}
-                    alt="Card Image"
-                    className={styles.cardImage}
-                  />
-                </div>
-
-                <div className={styles.cardText}>
-                  <h3>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit
-                  </h3>
-                  <p>
-                    Curabitur eros diam, aliquam eget cursus et, dapibus a
-                    neque. Quisque venenatis, enim eget imperdiet eleifend, erat
-                    sapien tempus nibh.
-                  </p>
-                </div>
-
-                <div className={styles.cardLinkContainer}>
-                  <Link href="#" className={styles.cardLink}>
-                    <p>Leia mais</p>
-                    <Image
-                      src={arrow}
-                      width={12}
-                      height={9}
-                      alt="Global Image"
-                      className={styles.arrow}
-                    />
-                  </Link>
-                </div>
-              </div>
-            </div>
+            <Card
+              title={info[52]?.title}
+              body={info[52]?.body}
+              imageSrc={cardOne}
+            />
+            <Card
+              title={info[7]?.title}
+              body={info[7]?.body}
+              imageSrc={cardTwo}
+            />
+            <Card
+              title={info[14]?.title}
+              body={info[14]?.body}
+              imageSrc={cardThree}
+            />
           </div>
         </section>
       </section>
