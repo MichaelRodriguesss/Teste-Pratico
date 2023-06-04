@@ -1,6 +1,7 @@
 import Image from "next/image";
 import styles from "../../styles/Navbar.module.scss";
 import Link from "next/link";
+import vector from "../../../public/images/vector.png";
 
 export default function Navbar() {
   return (
@@ -27,10 +28,10 @@ export default function Navbar() {
         <div className={styles.search}>
           <input type="text" placeholder="Buscar" />
           <Image
-            src="/images/vector.png"
+            src={vector}
             width={1920}
             height={76}
-            alt="Header Image"
+            alt="Search Image"
             className={styles.searchIcon}
           />
         </div>
