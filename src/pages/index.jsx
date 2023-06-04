@@ -2,7 +2,6 @@ import Head from "next/head";
 import styles from "../styles/Home.module.scss";
 import Navbar from "../components/Navbar/Navbar";
 import Link from "next/link";
-// import globalIcone from "../../public/images/ícone.png";
 import Image from "next/image";
 import check from "../../public/images/check.png";
 import cardOne from "../../public/images/card1.png";
@@ -122,7 +121,6 @@ export default function Home() {
           <div className={styles.shutterstock}>
             <div className={styles.shutterstockContent}>
               <Image
-                // src={globalIcone}
                 src="/images/ícone.png"
                 width={39}
                 height={39}
