@@ -4,37 +4,39 @@ import Link from "next/link";
 
 export default function Navbar() {
   return (
-    <nav className={styles.navbarContainer}>
-      <div className={styles.navbar}>
-        <ul>
-          <Link href="#" className={styles.active}>
-            <li>Lorem ipsum</li>
-          </Link>
-          <Link href="#">
-            <li>Lorem ipsum</li>
-          </Link>
-          <Link href="#">
-            <li>Lorem ipsum</li>
-          </Link>
-          <Link href="#">
-            <li>Lorem ipsum</li>
-          </Link>
-          <Link href="#">
-            <li>Lorem ipsum</li>
-          </Link>
-        </ul>
+    <header>
+      <nav className={styles.navbarContainer}>
+        <div className={styles.navbar}>
+          <ul>
+            <Link href="#" className={styles.active}>
+              <li>Lorem ipsum</li>
+            </Link>
+            <Link href="#">
+              <li>Lorem ipsum</li>
+            </Link>
+            <Link href="#">
+              <li>Lorem ipsum</li>
+            </Link>
+            <Link href="#">
+              <li>Lorem ipsum</li>
+            </Link>
+            <Link href="#">
+              <li>Lorem ipsum</li>
+            </Link>
+          </ul>
 
-        <div className={styles.search}>
-          <input type="text" placeholder="Buscar" />
-          <Image
-            src="/images/Vector.png"
-            width={1920}
-            height={76}
-            alt="Search Image"
-            className={styles.searchIcon}
-          />
+          <div className={styles.search}>
+            <input type="text" placeholder="Buscar" />
+            <Image
+              src="/images/Vector.png"
+              width={1920}
+              height={76}
+              alt="Search Image"
+              className={styles.searchIcon}
+            />
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </header>
   );
 }
