@@ -222,7 +222,7 @@ export default function Home() {
           </section>
           <section className={styles.sectionCards}>
             <h2 className={styles.knowMore}>Você pode se interessar também</h2>
-            <div className={styles.cardsContainer}>
+            <article className={styles.cardsContainer}>
               <Card
                 title={info[52]?.title}
                 body={info[52]?.body}
@@ -238,7 +238,7 @@ export default function Home() {
                 body={info[14]?.body}
                 imageSrc={cardThree}
               />
-            </div>
+            </article>
           </section>
         </div>
       </main>
