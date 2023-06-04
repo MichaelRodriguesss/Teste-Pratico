@@ -2,7 +2,7 @@ import Head from "next/head";
 import styles from "../styles/Home.module.scss";
 import Navbar from "../components/Navbar/Navbar";
 import Link from "next/link";
-import globalIcone from "../../public/images/ícone.png";
+// import globalIcone from "../../public/images/ícone.png";
 import Image from "next/image";
 import check from "../../public/images/check.png";
 import cardOne from "../../public/images/card1.png";
@@ -87,7 +87,9 @@ export default function Home() {
             </div>
 
             <div className={styles.text}>
-              <h2></h2>
+              <h2>
+                Fusce ut nibh ornare, ullamcorper velit vitae, dignissim tellus.
+              </h2>
               <p>
                 Nullam mattis auctor leo, sit amet aliquet odio pellentesque ut.
                 Mauris molestie turpis eget egestas venenatis. Duis nec elit
@@ -120,7 +122,8 @@ export default function Home() {
           <div className={styles.shutterstock}>
             <div className={styles.shutterstockContent}>
               <Image
-                src={globalIcone}
+                // src={globalIcone}
+                src="/images/ícone.png"
                 width={39}
                 height={39}
                 alt="Global Image"
