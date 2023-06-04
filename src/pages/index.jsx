@@ -7,6 +7,7 @@ import check from "../../public/images/check.png";
 import cardOne from "../../public/images/card1.png";
 import cardTwo from "../../public/images/card2.png";
 import cardThree from "../../public/images/card3.png";
+import globalIcone from "../../public/images/icone.png";
 import { useState, useEffect } from "react";
 import { Api } from "../providers/Api/api";
 
@@ -121,10 +122,10 @@ export default function Home() {
           <div className={styles.shutterstock}>
             <div className={styles.shutterstockContent}>
               <Image
-                src="/images/ícone.png"
+                src={globalIcone}
                 width={39}
                 height={39}
-                alt="Global Image"
+                alt="globe icon"
                 className={styles.globalIcone}
               />
               <div className={styles.imageText}>

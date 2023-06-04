@@ -1,7 +1,7 @@
 import Image from "next/image";
 import styles from "../../styles/Navbar.module.scss";
 import Link from "next/link";
-import navbarIcon from "../../../public/images/Vector.png";
+import navbarIcon from "../../../public/images/vector.png";
 
 export default function Navbar() {
   return (
