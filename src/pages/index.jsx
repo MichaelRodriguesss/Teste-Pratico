@@ -9,7 +9,6 @@ import cardTwo from "../../public/images/card2.png";
 import cardThree from "../../public/images/card3.png";
 import { useState, useEffect } from "react";
 import { Api } from "../providers/Api/api";
-
 import Card from "../components/Card/Card";
 
 export default function Home() {
@@ -121,7 +120,7 @@ export default function Home() {
           <div className={styles.shutterstock}>
             <div className={styles.shutterstockContent}>
               <Image
-                src="/images/ícone.png"
+                src="/images/icone.png"
                 width={39}
                 height={39}
                 alt="globe icon"
@@ -165,7 +164,7 @@ export default function Home() {
                   src={check}
                   width={12}
                   height={9}
-                  alt="Global Image"
+                  alt="check Image"
                   className={styles.check}
                 />
                 Suspendisse tempor justo sed dui bibendum
@@ -185,7 +184,7 @@ export default function Home() {
                   src={check}
                   width={12}
                   height={9}
-                  alt="Global Image"
+                  alt="check Image"
                   className={styles.check}
                 />
                 In venenatis ex nisi ut aliquam
@@ -195,7 +194,7 @@ export default function Home() {
                   src={check}
                   width={12}
                   height={9}
-                  alt="Global Image"
+                  alt="check Image"
                   className={styles.check}
                 />
                 Suspendisse facilisis mauris eget augue
