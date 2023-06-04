@@ -27,7 +27,7 @@ export default function Navbar() {
         <div className={styles.search}>
           <input type="text" placeholder="Buscar" />
           <Image
-            src="/images/vector.png"
+            src="/images/Vector.png"
             width={1920}
             height={76}
             alt="Search Image"
